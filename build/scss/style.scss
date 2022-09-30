@@ -1,7 +1,7 @@
 //Bootstrap ---------------------------------------------------
-@import "../../plugins/bootstrap/scss/functions";
+@import "../../build/scss/bootstrap/scss/functions";
 @import "_bootstrap-variable";
-@import "../../plugins/bootstrap/scss/bootstrap";
+@import "../../build/scss/bootstrap/scss/bootstrap";
 
 @import "variable";
 @import "mixins";

@@ -13,209 +13,214 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="dist/css/style.css">
 </head>
 
 <body>
 
-    <section class="main_section">
-       <h1><span class="logo-outer"><img src="img/my-logo.svg"></span></h1>
-<div class="cursor"></div>
-
-<div class="container">
-    <canvas id="canvas" style="border: 1px solid" width="600" height="300"></canvas>
-  <div class="close"></div>
-  <div class="min"></div>
-  <div class="max"></div>
-  <div class="navigation">
-    <a class="link">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewbox="0 0 64 64"
-        width="24px"
-        height="24px"
-      >
-        <rect
-          x="4"
-          y="34"
-          class="stroke-only move-right"
-          width="16"
-          height="16"
-        />
-        <rect
-          x="24"
-          y="34"
-          class="stroke-only move-right"
-          width="16"
-          height="16"
-        />
-        <rect
-          x="24"
-          y="14"
-          class="stroke-only move-left"
-          width="16"
-          height="16"
-        />
-        <rect
-          x="44"
-          y="14"
-          class="stroke-only move-left"
-          width="16"
-          height="16"
-        />
-      </svg>
-    </a>
-    <a class="link">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewbox="-4 0 60 64"
-        width="28px"
-        height="24px"
-      >
-        <path
-          class="stroke-only svg-search turn-90"
-          d="M43.17,43.17c0.97-0.97,1.82-2.01,2.54-3.11l11.6,11.6l-5.66,5.66l-11.6-11.6
-            C41.16,44.99,42.2,44.14,43.17,43.17z"
-        />
-        <path
-          class="stroke-only svg-search turn-90"
-          d="M40.83,12.54c6.84,6.84,7.69,17.41,2.54,25.17c-0.73,1.1-1.58,2.14-2.54,3.11s-2.01,1.82-3.11,2.54
-            c-7.77,5.14-18.33,4.3-25.17-2.54c-7.81-7.81-7.81-20.47,0-28.28S33.02,4.73,40.83,12.54z"
-        />
-      </svg>
-    </a>
-    <a class="link margin-left-auto">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewbox="0 0 64 64"
-        width="24px"
-        height="24px"
-      >
-        <path
-          class="stroke-only transform-center-center turn-15"
-          d="M32,59c3.31,0,6-2.69,6-6H26C26,56.31,28.69,59,32,59z"
-        />
-        <path
-          class="stroke-only transform-center-center turn-15"
-          d="M48,36.06V25c0-7.47-5.13-13.73-12.05-15.49C34.68,9.19,33.37,9,32,9s-2.68,0.19-3.95,0.51
-              C21.13,11.27,16,17.53,16,25v11.06c0,5.48-3.1,10.49-8,12.94h16h16h16C51.1,46.55,48,41.54,48,36.06z"
-        />
-        <line
-          class="stroke-only transform-center-center turn-15"
-          x1="32"
-          y1="5"
-          x2="32"
-          y2="9"
-        />
-      </svg>
-    </a>
-    <a class="link">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewbox="0 0 64 64"
-        width="24px"
-        height="28px"
-      >
-        <path
-          class="stroke-only"
-          d="M36,44c0,2.21-1.79,4-4,4s-4-1.79-4-4H4v16h56V44H36z"
-        />
-        <path
-          class="stroke-only"
-          d="M29,12H12L4,44h24c0,2.21,1.79,4,4,4s4-1.79,4-4h24l-8-32H35"
-        />
-        <line
-          class="stroke-only move-up-medium"
-          x1="32"
-          y1="4"
-          x2="32"
-          y2="36"
-        />
-        <polyline
-          class="stroke-only move-up-medium"
-          points="26,30 32,36 38,30 	"
-        />
-      </svg>
-    </a>
-    <a class="link">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewbox="0 0 64 64"
-        width="24px"
-        height="28px"
-      >
-        <path
-          class="stroke-only"
-          d="M32,32C16.54,32,4,44.54,4,60h56C60,44.54,47.46,32,32,32z"
-        />
-        <circle
-          class="stroke-only transform-center-center move-up-little"
-          cx="32"
-          cy="16"
-          r="12"
-        />
-      </svg>
-    </a>
-    <a class="link">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        viewbox="0 0 64 64"
-        width="24px"
-        height="24px"
-      >
-        <rect x="4" y="16" class="stroke-only" width="56" height="32" />
-        <line class="stroke-only" x1="16" y1="20" x2="16" y2="44" />
-        <line class="stroke-only" x1="32" y1="20" x2="32" y2="44" />
-        <line class="stroke-only" x1="48" y1="20" x2="48" y2="44" />
-        <circle class="stroke-only move-down" cx="16" cy="24" r="2" />
-        <circle class="stroke-only move-up" cx="32" cy="40" r="2" />
-        <circle class="stroke-only move-down" cx="48" cy="24" r="2" />
-      </svg>
-    </a>
+    <div class="wrapper">
+      <header>
+        <div class="container-fluid">
+          <div class="header-inner">
+            <img src="img/Logo.png" alt="">
+            <div class="hamburger-box">
+              <div class="hamburger-inner"></div>
+            </div>
+          </div>
+        </div>
+        <div class="menu">
+          <div class="row h-100">
+            <div class="col-md-6 align-self-center menu-inner menu-left">
+              <div class="menu-content">
+                <blockquote class="blockquote text-center position-relative">
+                  <h2><span class="outline-text"> good design is 
+                  good business. </span></h2>
+                  <div class="blockquote-footer text-right"><cite title="Thomas Watson Jr."> Thomas Watson Jr.</cite></div>
+                </blockquote>
+              </div>
+              
+            </div>
+            <div class="col-md-6 align-self-center menu-inner menu-right">
+              <div class="menu-content">
+              <div class="menu-right-links">
+                <ul class="navigation-links">
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About myself</a></li>
+                  <li><a href="#">Skills that I possess</a></li>
+                  <li><a href="#">My Portfolio</a></li>
+                  <li><a href="#">Work with me</a></li>
+              </ul>
+              <div>
+                <p>Find me on</p>
+                <div class="menu-socials">
+                    <a href="#">
+                      <img src="img/codepen.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="img/dribbble.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="img/github.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="img/mail.svg" alt="">
+                    </a>
+                    <a href="#">
+                      <img src="img/linkedin.svg" alt="">
+                    </a>
+                </div>
+              </div>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>
+          
+      </header>
+      <!-- <header id="header">
+        <div class="container">
+            <div class="header-content">
+              <h1 class="site-title">
+                <a href="index.html" class="logo-wrapper" rel="home">
+                  <img src="img/my-logo.svg" class="default-logo" alt="Portfolio" loading="lazy">
+                </a>            
+              </h1>
+              <nav>
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">About</a></li>
+                  <li><a href="#">Services</a></li>
+                </ul>
+              </nav>
+              <div>
+                
+              </div>
+            </div>
+        </div>
+        
+      </header> -->
+      <div class="main-container">
+<section id="banner" class="banner">
+  <div>
+    <span class="overlap-text-outer">
+      <span class="outline-text">Hello</span> 
+      <!-- <span class="overlap-text">I’m Aneri Shah</span>  -->
+      <svg class="overlap-text" width="164" viewBox="0 85 164 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+        <path id="path1">
+          <!-- <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/> -->
+          <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="1" fill="freeze"/>
+        </path>
+         <text class="overlap-text">
+          <textPath xlink:href="#path1">I’m Aneri Shah
+          </textPath>
+        </text>
+       </svg>
+    </span>
+    <svg class="banner-heading-wrap" width="100%" viewBox="0 55 714 69" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+      <path id="path2">
+         <!-- <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/> -->
+         <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="1.8s" repeatCount="1" fill="freeze"/>
+       </path>
+       <text class="banner-heading">
+         <textPath xlink:href="#path2">&#60;/A Front-End Developer &#62;
+         </textPath>
+       </text>
+     </svg>
+    <!-- <h2>
+      &#60;/A Front-End Developer &#62;
+    </h2> -->
+    <div class="socials-wrap">
+        <a href="#">
+          <img src="img/codepen.svg" alt=""><span> Codepen </span>
+        </a>
+        <a href="#">
+          <img src="img/dribbble.svg" alt=""><span> Dribbble</span>
+        </a>
+        <a href="#">
+          <img src="img/github.svg" alt=""><span>GitHub </span> 
+        </a>
+        <a href="#">
+          <img src="img/mail.svg" alt=""><span> Mail </span>
+        </a>
+        <a href="#">
+          <img src="img/linkedin.svg" alt=""><span>LinkedIn</span>
+        </a>
+    </div>
+    <div class="scroll-down-wrap">
+      <a href="#" class="scroll-down bounce"> <span>Scroll Down</span> <img src="img/arrow-down.svg" alt=""></a>
+    </div>
   </div>
-  
-  <div class="content">
-    <h1>Hipster Ipsum<small> (hover icons and links)</small></h1>
-    <p>
-      Tbh venmo scenester, cloud bread sustainable lyft blue bottle.
-      Truffaut <button class="btn">tacos</button> fam poutine selvage plaid
-      lyft polaroid, <button class="btn">lo-fi</button> small batch. Bespoke
-      godard wayfarers affogato green juice irony fam snackwave selvage ugh
-      tumblr food truck VHS af. Selvage raw denim man braid migas pickled,
-      subway tile leggings flexitarian PBR&B. Squid sriracha occupy godard
-      plaid artisan fingerstache bushwick venmo locavore letterpress
-      organic.
-    </p>
-    <p>
-      Try-hard schlitz asymmetrical snackwave cornhole paleo. Pok pok
-      raclette fam beard aesthetic XOXO keytar gluten-free
-      <button class="btn">8-bit</button> mumblecore yr distillery skateboard
-      tumblr put a bird on it. Meditation pour-over single-origin coffee
-      master cleanse leggings,
-      <button class="btn">four loko</button> typewriter. Leggings hot
-      chicken edison bulb bushwick VHS health goth coloring book, vice
-      kinfolk twee pitchfork succulents locavore before they sold out
-      fingerstache. Forage cornhole try-hard flexitarian chillwave
-      <button class="btn">craft beer</button>
-      <button class="btn">la croix</button> tote bag. Activated charcoal
-      cardigan celiac <button class="btn">messenger bag</button> biodiesel
-      mixtape. Gochujang glossier beard tumblr gluten-free.
-    </p>
-    <p>
-      Snackwave affogato humblebrag chia microdosing you probably haven't
-      heard of them kickstarter photo booth ennui kale chips cliche austin
-      poke chillwave venmo. <button class="btn">La croix</button> kombucha
-      slow-carb vegan actually pitchfork cold-pressed fanny pack crucifix
-      salvia brooklyn church-key disrupt. Viral brooklyn thundercats
-      vaporware wayfarers, artisan mumblecore. Fingerstache raw denim
-      biodiesel vape kitsch hot chicken cloud bread. Yuccie mumblecore
-      dreamcatcher next level poutine. Skateboard humblebrag glossier
-      distillery photo booth cornhole scenester meditation single-origin
-      coffee authentic vinyl fixie copper mug shaman.
-    </p>
+ 
+</section>
+<section id="about">
+  <div class="container">
+    <div class="row">
+        <div class="col-lg-6">
+          <div class="about-figure">
+            <h2 class="outline-text about-text">About Me</h2>
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="58.288" height="373.042" viewBox="0 0 58.288 373.042">
+              <text id="" x="50%" y="50%" fill="transparent" text-anchor="middle">AnonymousCoder</text>
+            </svg> -->
+            
+            <img src="img/about-img.jpg" alt="">
+          </div>
+           
+        </div>
+        <div class="col-lg-6 align-self-center">
+          <!-- <p class="title">INTRODUCTION</p> -->
+          <h3>
+            I'm Aneri Shah
+          </h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis purus ac eleifend sodales. Donec risus ante, scelerisque eget metus ut, feugiat imperdiet purus. Maecenas consequat diam nisl, et tempus libero tincidunt et. Nulla eu mi vel mauris ornare bibendum.</p>
+            <div>
+              <a href="#">Let's discuss <img src="img/arrow-right.svg" alt=""></a>
+              <!-- <button class="btn btn-primary">Let’s Create Awesome Project</button> -->
+            </div>
+        </div>
+    </div>
   </div>
+</section>
+<!-- <section id="works">
+  <div class="container">
+      <p class="title">INTRODUCTION</p>
+      <h3>
+        Featured Works
+      </h3>
+      <p>I collaborated with great people to create awesome product that actually works.</p>
+        <div>
+          <button class="btn btn-primary">Let’s Create Awesome Project</button>
+        </div>
+    </div>
+</section>
+<section id="services">
+  <div class="container">
+      <p class="title">Services</p>
+      <h3>
+        Services I Provide
+      </h3>
+      <p>I collaborated with great people to create awesome product that actually works.</p>
+        <div>
+          <button class="btn btn-primary">Let’s Create Awesome Project</button>
+        </div>
+    </div>
+</section>
+<section id="skills">
+  <div class="container">
+      <p class="title">Services</p>
+      <h3>
+        Area Of Experties
+      </h3>
+    
+    </div>
+</section> -->
 </div>
+</div>
+
+<footer>
+  
+</footer>
+
 <script src="dist/js/all.js"></script>
 
 </body>

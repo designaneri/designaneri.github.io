@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1280" height="800" viewBox="0 0 1280 800">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Main_BG" data-name="Main BG" width="1280" height="800" fill="#fff" opacity="0.25"/>
+    </clipPath>
+    <linearGradient id="linear-gradient" x1="-0.097" y1="-0.023" x2="0.87" y2="1.152" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="0.435" stop-color="#e8edfe"/>
+      <stop offset="1" stop-color="#fefff0"/>
+    </linearGradient>
+  </defs>
+  <g id="BG" clip-path="url(#clip-path)">
+    <g id="Group_1" data-name="Group 1">
+      <rect id="Main_BG-2" data-name="Main BG" width="1280" height="800" fill="url(#linear-gradient)"/>
+      <rect id="Main_BG-3" data-name="Main BG" width="1280" height="800" fill="#fff" opacity="0.25"/>
+      <rect id="obj" width="1067" height="1067" rx="533.5" transform="translate(-533 -419)" fill="#b599ee" style="mix-blend-mode: color-burn;isolation: isolate"/>
+    </g>
+  </g>
+</svg>

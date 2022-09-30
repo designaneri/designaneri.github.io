@@ -38,18 +38,43 @@ document.querySelectorAll('.cursor').forEach(cursor => {
         }
     }
 
-    document.addEventListener('mousemove', e => {
-        const state = createState(e)
-        updateProperties(cursor, state)
-    })
+    // document.addEventListener('mousemove', e => {
+    //     const state = createState(e)
+    //     updateProperties(cursor, state)
+    // })
 
-    document.querySelectorAll('a, button').forEach(elem => {
-        elem.addEventListener('mouseenter', () => (onElement = elem))
-        elem.addEventListener('mouseleave', () => (onElement = undefined))
-    })
+    // document.querySelectorAll('a, button').forEach(elem => {
+    //     elem.addEventListener('mouseenter', () => (onElement = elem))
+    //     elem.addEventListener('mouseleave', () => (onElement = undefined))
+    // })
 })
 
+// window.onscroll = function() {scrollFunction()};
+
+// function scrollFunction() {
+//     var element = document.getElementById("header");
+//   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+//     element.classList.add("sticky");
+//   } else {
+//     element.classList.remove("sticky");
+//   }
+// }
 
 $(window).on("load", function () {
-
+    $(".hamburger-box").click(function(e){
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        $(this).toggleClass("is-active");
+        if($("html,body").hasClass("menu-open")){
+            $("html,body").removeClass("menu-open")
+        }else{
+            $("html,body").addClass("menu-open")
+        }
+        
+      });
+      $(".scroll-down").click(function() {
+        $('html,body').animate({
+            scrollTop: $("#about").offset().top},
+            'slow');
+    });
 });

@@ -17,10 +17,12 @@ $gray-100: #f1f1f1 !default;
 $gray-200: #f7f7f7 !default;
 $gray-300: #dddddd !default;
 $gray-400: #e8e8e8 !default;
-$gray-500: #4a4a4a !default;
+$gray-500: #4C4B54 !default;
 $gray-600: #989898 !default;
 $gray-700: #808080 !default;
 $gray-800: #777777 !default;
 $gray-900: #333333 !default;
 
-// $primary: #ECAE30;
+$primary: #5C38A5;
+$primary-light: lighten($primary, 33%);
+$secondary: #1AD1A1;

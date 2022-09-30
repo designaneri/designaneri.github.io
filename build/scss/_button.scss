@@ -1,4 +1,4 @@
-/*
+
 // ===============
 //  Buttons Start
 // ===============
@@ -20,6 +20,7 @@ button:focus {
     cursor: pointer;
     position: relative;
     display: inline-block;
+    border-radius: 4px;
     i{
         margin: 0 10px 0px 0;
         font-size: 14px;
@@ -27,18 +28,12 @@ button:focus {
     }
 }
 .btn-primary{
-    @extend .btn;
-    background-color: $color-gold;
-    color: $color-black;
-    border: 1px solid $color-gold;
     &:hover,&:focus,&:active,&:not(:disabled):not(.disabled):active{
-        background-color: rgba(236, 174, 48, 0.4);
-        border: 1px solid $color-gold;
-        color: $color-black;
         transition: 0.3s all ease;
         box-shadow: none;
     }    
 }
+/*
 .btn-primary.disabled, .btn-primary:disabled{
     background-color: $color-gold;
     color: $color-black;
