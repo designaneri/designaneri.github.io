@@ -10,7 +10,7 @@ $grid-breakpoints: (
   xxxl: 1600px
 ) !default;
 
-$grid-gutter-width: 20px !default;
+$grid-gutter-width: 40px !default;
 
 
 $gray-100: #f1f1f1 !default;
@@ -26,3 +26,52 @@ $gray-900: #333333 !default;
 $primary: #5C38A5;
 $primary-light: lighten($primary, 33%);
 $secondary: #1AD1A1;
+$tertiary:#EE4D8D;
+
+
+@mixin common-vars {
+  --c-white: #ffffff;
+  --c-black: #1A1729;
+}
+/*=====================================================
+  light theme colors ( as SCSS mixin )
+=====================================================*/
+@mixin theme-light {
+  --c-body-bg: #ffffff;
+  --c-text-main: #1A1729;
+  --c-outline-text: #ffffff;
+  --c-section-bg-light: #F4F2F9;
+  --c-outline-text-shadow: rgba(92,56,165,0.2);
+  --c-text-light: #575861;
+  --c-gray-light: #EFEFEF;
+  --c-gray-lighter: #f9f9f9;
+  --c-border: #DADCE5;
+  --c-border-light: var(--c-gray-light);
+  --shadow-opacity: 0.2;
+  --c-shadow: 0 10px 10px rgba(0, 0, 0, var(--shadow-opacity));
+}
+/*=====================================================
+  dark theme colors ( as SCSS mixin )
+=====================================================*/
+@mixin theme-dark {
+  --c-body-bg: #272935;
+  --c-text-main: #ffffff;
+  --c-outline-text:#272935;
+  --c-section-bg-light: #424554;
+  --c-outline-text-shadow: rgba(255,255,255,0.2);
+  --c-text-light: #b2b2b3;
+  --c-gray-light: #454854;
+  --c-gray-lighter: #303340;
+  --c-border: #35394b;
+  --c-border-light: var(--c-gray-light);
+  --shadow-opacity: 0.2;
+  --c-shadow: 0 10px 10px rgba(0, 0, 0, var(--shadow-opacity));
+}
+:root {
+  @include common-vars;
+  @include theme-light;
+}
+[data-theme="dark"] {
+  @include common-vars;
+  @include theme-dark;
+}

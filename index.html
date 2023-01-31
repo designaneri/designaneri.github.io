@@ -20,12 +20,18 @@
 <body>
 
     <div class="wrapper">
-      <header>
+      <header id="header">
         <div class="container-fluid">
           <div class="header-inner">
-            <img src="img/Logo.png" alt="">
-            <div class="hamburger-box">
-              <div class="hamburger-inner"></div>
+            <img src="img/Logo.png" alt="" class="logo-img">
+            <div>
+              <button id="theme-toggle" class="btn btn-link btn-sm ml-2 small" type="button">
+                <span class="d-block-light d-none"><img src="img/moon.svg" alt=""></span>
+                <span class="d-block-dark d-none"><img src="img/sun.svg" alt=""></span>
+               </button>
+               <div class="hamburger-box">
+                <div class="hamburger-inner"></div>
+              </div>
             </div>
           </div>
         </div>
@@ -54,21 +60,21 @@
               <div>
                 <p>Find me on</p>
                 <div class="menu-socials">
-                    <a href="#">
-                      <img src="img/codepen.svg" alt="">
-                    </a>
-                    <a href="#">
-                      <img src="img/dribbble.svg" alt="">
-                    </a>
-                    <a href="#">
-                      <img src="img/github.svg" alt="">
-                    </a>
-                    <a href="#">
-                      <img src="img/mail.svg" alt="">
-                    </a>
-                    <a href="#">
-                      <img src="img/linkedin.svg" alt="">
-                    </a>
+                  <a href="https://codepen.io/design_aneri">
+                    <img src="img/codepen.svg" alt="">
+                  </a>
+                  <a href="https://dribbble.com/design_aneri">
+                    <img src="img/dribbble.svg" alt="">
+                  </a>
+                  <a href="https://github.com/designaneri">
+                    <img src="img/github.svg" alt="">
+                  </a>
+                  <a href="mailto:design.aneri19@gmail.com">
+                    <img src="img/mail.svg" alt="">
+                  </a>
+                  <a href="https://www.linkedin.com/in/aneri-shah-93601765">
+                    <img src="img/linkedin.svg" alt="">
+                  </a>
                 </div>
               </div>
               </div>
@@ -104,96 +110,356 @@
 <section id="banner" class="banner">
   <div>
     <span class="overlap-text-outer">
-      <span class="outline-text">Hello</span> 
+      <span class="outline-text">Hello</span>
       <!-- <span class="overlap-text">I’m Aneri Shah</span>  -->
-      <svg class="overlap-text" width="164" viewBox="0 85 164 34" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+      <svg
+        class="overlap-text"
+        width="164"
+        viewBox="0 85 164 34"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        version="1.1"
+      >
         <path id="path1">
           <!-- <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/> -->
-          <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="1" fill="freeze"/>
+          <animate
+            attributeName="d"
+            from="m0,110 h0"
+            to="m0,110 h1100"
+            dur="6.8s"
+            begin="0s"
+            repeatCount="1"
+            fill="freeze"
+          />
         </path>
-         <text class="overlap-text">
-          <textPath xlink:href="#path1">I’m Aneri Shah
-          </textPath>
+        <text class="overlap-text">
+          <textPath xlink:href="#path1">I’m Aneri Shah</textPath>
         </text>
-       </svg>
+      </svg>
     </span>
-    <svg class="banner-heading-wrap" width="100%" viewBox="0 55 714 69" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
+    <svg
+      class="banner-heading-wrap"
+      width="100%"
+      viewBox="0 55 714 69"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      version="1.1"
+    >
       <path id="path2">
-         <!-- <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/> -->
-         <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="1.8s" repeatCount="1" fill="freeze"/>
-       </path>
-       <text class="banner-heading">
-         <textPath xlink:href="#path2">&#60;/A Front-End Developer &#62;
-         </textPath>
-       </text>
-     </svg>
+        <!-- <animate attributeName="d" from="m0,110 h0" to="m0,110 h1100" dur="6.8s" begin="0s" repeatCount="indefinite"/> -->
+        <animate
+          attributeName="d"
+          from="m0,110 h0"
+          to="m0,110 h1100"
+          dur="6.8s"
+          begin="1.8s"
+          repeatCount="1"
+          fill="freeze"
+        />
+      </path>
+      <text class="banner-heading">
+        <textPath xlink:href="#path2">
+          &#60;/A Front-End Developer &#62;
+        </textPath>
+      </text>
+    </svg>
     <!-- <h2>
       &#60;/A Front-End Developer &#62;
     </h2> -->
     <div class="socials-wrap">
-        <a href="#">
-          <img src="img/codepen.svg" alt=""><span> Codepen </span>
-        </a>
-        <a href="#">
-          <img src="img/dribbble.svg" alt=""><span> Dribbble</span>
-        </a>
-        <a href="#">
-          <img src="img/github.svg" alt=""><span>GitHub </span> 
-        </a>
-        <a href="#">
-          <img src="img/mail.svg" alt=""><span> Mail </span>
-        </a>
-        <a href="#">
-          <img src="img/linkedin.svg" alt=""><span>LinkedIn</span>
-        </a>
+      <a href="https://codepen.io/design_aneri">
+        <img src="img/codepen.svg" alt="" /><span> Codepen </span>
+      </a>
+      <a href="https://dribbble.com/design_aneri">
+        <img src="img/dribbble.svg" alt="" /><span> Dribbble</span>
+      </a>
+      <a href="https://github.com/designaneri">
+        <img src="img/github.svg" alt="" /><span>GitHub </span>
+      </a>
+      <a href="mailto:design.aneri19@gmail.com">
+        <img src="img/mail.svg" alt="" /><span> Mail </span>
+      </a>
+      <a href="https://www.linkedin.com/in/aneri-shah-93601765">
+        <img src="img/linkedin.svg" alt="" /><span>LinkedIn</span>
+      </a>
     </div>
     <div class="scroll-down-wrap">
-      <a href="#" class="scroll-down bounce"> <span>Scroll Down</span> <img src="img/arrow-down.svg" alt=""></a>
+      <a href="#" class="scroll-down bounce">
+        <span>Scroll Down</span> <img src="img/arrow-down.svg" alt=""
+      /></a>
     </div>
   </div>
- 
 </section>
 <section id="about">
   <div class="container">
     <div class="row">
-        <div class="col-lg-6">
-          <div class="about-figure">
-            <h2 class="outline-text about-text">About Me</h2>
-            <!-- <svg xmlns="http://www.w3.org/2000/svg" width="58.288" height="373.042" viewBox="0 0 58.288 373.042">
+      <div class="col-lg-6">
+        <div class="about-figure">
+          <h2 class="outline-text about-text">About Me</h2>
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="58.288" height="373.042" viewBox="0 0 58.288 373.042">
               <text id="" x="50%" y="50%" fill="transparent" text-anchor="middle">AnonymousCoder</text>
             </svg> -->
-            
-            <img src="img/about-img.jpg" alt="">
-          </div>
-           
+
+          <img src="img/about-img.png" alt="" />
         </div>
-        <div class="col-lg-6 align-self-center">
-          <!-- <p class="title">INTRODUCTION</p> -->
-          <h3>
-            I'm Aneri Shah
-          </h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer lobortis purus ac eleifend sodales. Donec risus ante, scelerisque eget metus ut, feugiat imperdiet purus. Maecenas consequat diam nisl, et tempus libero tincidunt et. Nulla eu mi vel mauris ornare bibendum.</p>
-            <div>
-              <a href="#">Let's discuss <img src="img/arrow-right.svg" alt=""></a>
-              <!-- <button class="btn btn-primary">Let’s Create Awesome Project</button> -->
-            </div>
+      </div>
+      <div class="col-lg-6 align-self-center">
+        <!-- <p class="title">INTRODUCTION</p> -->
+        <h3>I'm Aneri Shah</h3>
+        <p>
+          I’m a Front-End Developer located in India. I have a serious passion
+          for UI effects, animations and creating intuitive, dynamic user
+          experiences.
+        </p>
+        <p>
+          Well-organised person, problem solver, independent employee with high
+          attention to detail.
+        </p>
+        <div class="mt-5 pt-3">
+          <a href="#"
+            >Let's make something special!
+            <img src="img/arrow-right.svg" alt=""
+          /></a>
+          <!-- <button class="btn btn-primary">Let’s Create Awesome Project</button> -->
         </div>
+      </div>
     </div>
   </div>
 </section>
-<!-- <section id="works">
+<section id="skills">
   <div class="container">
-      <p class="title">INTRODUCTION</p>
-      <h3>
-        Featured Works
-      </h3>
-      <p>I collaborated with great people to create awesome product that actually works.</p>
-        <div>
-          <button class="btn btn-primary">Let’s Create Awesome Project</button>
+    <h2 class="outline-text position-top-right">My Skills</h2>
+    <h3>Skills that I possess</h3>
+    <p>
+      I create successful responsive websites that are fast, easy to use, and
+      built with best practices. The main area of my expertise is front-end
+      development, HTML, CSS, JS, building small and medium web apps, custom
+      plugins, features, animations, and coding interactive layouts.
+    </p>
+    <p>
+      Visit my <a href="#">LinkedIn</a> profile for more details or just
+      <a href="#">contact me</a>.
+    </p>
+
+    <div class="skill-wrap mt-5 pt-3">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>HTML</span>
+              <span><em>95%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary"
+                role="progressbar"
+                style="width: 95%"
+                aria-valuenow="95"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>CSS, LESS, SASS</span>
+              <span><em>90%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary"
+                role="progressbar"
+                style="width: 90%"
+                aria-valuenow="90"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>Bootstrap</span>
+              <span><em>90%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary"
+                role="progressbar"
+                style="width: 90%"
+                aria-valuenow="90"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>JQuery</span>
+              <span><em>80%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary"
+                role="progressbar"
+                style="width: 80%"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>Gulp</span>
+              <span><em>80%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary"
+                role="progressbar"
+                style="width: 80%"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>Git</span>
+              <span><em>70%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary"
+                role="progressbar"
+                style="width: 70%"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>Angular Integrations</span>
+              <span><em>80%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary"
+                role="progressbar"
+                style="width: 80%"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>React UI with Mui</span>
+              <span><em>70%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-secondary"
+                role="progressbar"
+                style="width: 70%"
+                aria-valuenow="70"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
         </div>
+        <div class="col-lg-6">
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>UI designing</span>
+              <span><em>75%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 75%"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>UX designing</span>
+              <span><em>75%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar"
+                role="progressbar"
+                style="width: 75%"
+                aria-valuenow="75"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>Adobe XD</span>
+              <span><em>80%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-tertiary"
+                role="progressbar"
+                style="width: 80%"
+                aria-valuenow="80"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>Photoshop</span>
+              <span><em>50%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-tertiary"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+          <div class="progress-wrap">
+            <div class="d-flex justify-content-between skill-outer">
+              <span>Figma</span>
+              <span><em>50%</em></span>
+            </div>
+            <div class="progress">
+              <div
+                class="progress-bar bg-tertiary"
+                role="progressbar"
+                style="width: 50%"
+                aria-valuenow="50"
+                aria-valuemin="0"
+                aria-valuemax="100"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
 </section>
-<section id="services">
+<!--<section id="services">
   <div class="container">
       <p class="title">Services</p>
       <h3>
@@ -204,16 +470,38 @@
           <button class="btn btn-primary">Let’s Create Awesome Project</button>
         </div>
     </div>
-</section>
-<section id="skills">
+</section>-->
+<section id="skills" class="section-light">
   <div class="container">
-      <p class="title">Services</p>
-      <h3>
-        Area Of Experties
-      </h3>
-    
+    <h2 class="outline-text position-top-right">My Strengths</h2>
+    <div class="row">
+        <div class="col-md-6 strength-block">
+              <i><img src="img/icon-code.svg" alt=""></i>
+              <h3>Standard Code</h3>
+              <p>I have been very particular about maintaining standards of my code no matter what. 
+                I like it that way!</p>
+        </div>
+        <div class="col-md-6 strength-block">
+          <i><img src="img/icon-layout.svg" alt=""></i>
+          <h3>Responsive</h3>
+          <p>I always make sure that the websites I work on, they look & behave quite well across all browsers & responsive across all the devices.</p>
+        </div>
+        <div class="col-md-6 strength-block">
+          <i><img src="img/icon-feather.svg" alt=""></i>
+          <h3>Animation</h3>
+          <p>I love the magic I can visually create for the users through animating, be it giving effects on simple tiny buttons or adding effects intentionally targeted for users by animating complex graphics!</p>
+        </div>
+        <div class="col-md-6 strength-block">
+          <i><img src="img/icon-hash.svg" alt=""></i>
+          <h3>Clean &amp; Reusable</h3>
+          <p>
+            A deep dive into my code would never bother anyone as I keep it clean & easy to understand with lots of comments and anyone can reuse my code very easily.
+          </p>
+        </div>
     </div>
-</section> -->
+  </div>
+</section>
+<div class="cursor"></div>
 </div>
 </div>
 

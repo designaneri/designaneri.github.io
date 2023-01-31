@@ -14,8 +14,9 @@ document.querySelectorAll('.cursor').forEach(cursor => {
         const defaultState = {
             x: e.clientX,
             y: e.clientY,
-            width: 20,
-            height: 20,
+            width: 6,
+            height: 6,
+            scale:'100%',
             radius: '50%'
         }
 
@@ -23,13 +24,14 @@ document.querySelectorAll('.cursor').forEach(cursor => {
 
         if (onElement != null) {
             const { top, left, width, height } = onElement.getBoundingClientRect()
-            const radius = window.getComputedStyle(onElement).borderTopLeftRadius
+            // const radius = window.getComputedStyle(onElement).borderTopLeftRadius
 
-            computedState.x = left + width / 2
-            computedState.y = top + height / 2
-            computedState.width = width
-            computedState.height = height
-            computedState.radius = radius
+            // computedState.x = left + width / 2
+            // computedState.y = top + height / 2
+            computedState.width = 30
+            computedState.height = 30
+            computedState.scale = '12%'
+            // computedState.radius = radius
         }
 
         return {
@@ -38,27 +40,45 @@ document.querySelectorAll('.cursor').forEach(cursor => {
         }
     }
 
-    // document.addEventListener('mousemove', e => {
-    //     const state = createState(e)
-    //     updateProperties(cursor, state)
-    // })
+    document.addEventListener('mousemove', e => {
+        const state = createState(e)
+        updateProperties(cursor, state)
+    })
 
-    // document.querySelectorAll('a, button').forEach(elem => {
-    //     elem.addEventListener('mouseenter', () => (onElement = elem))
-    //     elem.addEventListener('mouseleave', () => (onElement = undefined))
-    // })
+    document.querySelectorAll('a, button').forEach(elem => {
+        elem.addEventListener('mouseenter', () => (onElement = elem))
+        elem.addEventListener('mouseleave', () => (onElement = undefined))
+    })
 })
 
-// window.onscroll = function() {scrollFunction()};
+var toggle = document.getElementById("theme-toggle");
+var storedTheme = localStorage.getItem('theme') || (window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+if (storedTheme)
+    document.documentElement.setAttribute('data-theme', storedTheme)
 
-// function scrollFunction() {
-//     var element = document.getElementById("header");
-//   if (document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
-//     element.classList.add("sticky");
-//   } else {
-//     element.classList.remove("sticky");
-//   }
-// }
+toggle.onclick = function() {
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+    var targetTheme = "light";
+
+    if (currentTheme === "light") {
+        targetTheme = "dark";
+    }
+
+    document.documentElement.setAttribute('data-theme', targetTheme)
+    localStorage.setItem('theme', targetTheme);
+};
+
+
+// header scroll
+var header = document.getElementById("header");
+window.onscroll = function(){
+    if (window.pageYOffset > 100) {
+        header.classList.add("sticky");
+    } else {
+        header.classList.remove("sticky");
+    }
+}
+
 
 $(window).on("load", function () {
     $(".hamburger-box").click(function(e){

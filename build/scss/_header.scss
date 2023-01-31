@@ -65,27 +65,43 @@
 //     }
 // }
 header{
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 99;
     .header-inner{
-        padding: 28px 35px;
+        padding: 28px 10px;
         display: flex;
         align-items: center;
         justify-content: space-between;
+        @include transition(all 0.3s);
+        .logo-img{
+            @include transition(all 0.3s);
+            max-width: 104px;
+        }
+    }
+    &.sticky{
+        background-color: var(--c-body-bg);
+        border-bottom: 1px solid #ebebeb;
+        .header-inner{
+            padding: 12px 10px;
+            .logo-img{
+                max-width: 75px;
+            }
+        }
     }
 }
 .hamburger-box{
-    position: fixed;
+    position: relative;
     display: inline-block;
     width: 40px;
     height: 36px;
     cursor: pointer;
-    right: 40px;
-    top: 40px;
-    z-index: 999;
+    vertical-align: middle;
+    // right: 30px;
+    // top: 40px;
+    z-index: 99;
     padding: 10px;
     .hamburger-inner,.hamburger-inner:before,.hamburger-inner:after{
         position: absolute;
@@ -95,7 +111,7 @@ header{
         transition-duration: .15s;
         transition-property: transform;
         border-radius: 4px;
-        background-color: $color-black;
+        background-color: var(--c-text-main);
     }
     .hamburger-inner{
         transition-timing-function: cubic-bezier(.55,.055,.675,.19);
@@ -143,8 +159,10 @@ header{
     z-index: 87;
     left: 0;
     right: 0;
+    visibility: hidden;
     // transition: all 0.3s;
     .menu-open &{
+        visibility: visible;
         height: 100%;
     }
     .menu-inner{
@@ -226,7 +244,9 @@ header{
 blockquote{
     max-width: 450px;
     margin: 0 auto;
+    font-family: $font-family-mulish;
     .outline-text{
+        color: inherit;
         text-shadow: -1px -1px 0 rgba(255,255,255,0.36), 1px -1px 0 rgba(255,255,255,0.36), -1px 1px 0 rgba(255,255,255,0.36), 1px 1px 0 rgb(255 255 255 / 36%);
     }
     &:before {

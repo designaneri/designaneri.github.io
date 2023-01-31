@@ -18,10 +18,12 @@
 
 
 html,body {
-    font-family: $font-family-mulish;
+    font-family: $font-family-merriweather;
     position   : relative;
-    background : $color-white;
-    font-size  : 16px;
+    background : var(--c-body-bg);
+    color: var(--c-text-main);
+    cursor: default;
+    font-size  : 18px;
     margin: 0;
     padding: 0;
     &.is-filter-open{
@@ -38,7 +40,7 @@ h1 {
 
 h2 {
     // font-size     : 30px;
-    color         : $color-black;
+    color: var(--c-text-main);
     // text-transform: capitalize;
     // font-weight   : 500;
     font-size: 52px;
@@ -50,29 +52,30 @@ h2 {
 h3 {
     font-size     : 24px;
     font-weight   : 500;
-    color         : $color-black;
+    color: var(--c-text-main);
 }
 
 h4 {
     font-size     : 22px;
     text-transform: capitalize;
     font-weight   : 400;
-    color         : $color-black;
+    color: var(--c-text-main);
 }
 
 h5 {
     font-size     : 16px;
     font-weight   : 400;
-    color         : #222222;
+    color: var(--c-text-main);
 }
 
 h6 {
     font-size  : 14px;
     font-weight: 400;
-    color      : #777777;
+    color: var(--c-text-main);
 }
 h1,h2,h3,h4,h5,h6{
     margin-bottom: 20px;
+    font-family: $font-family-mulish;
 }
 ul {
     padding-left : 0;
@@ -85,18 +88,18 @@ li {
 
 p {
     font-size  : 16px;
-    color      : $color-black;
+    color: var(--c-text-main);
     line-height: 18px;
 }
 
 a {
     transition        : 0.5s ease;
-    color: $primary; 
+    color: $secondary; 
     display: inline-block;
     &:hover{
         text-decoration   : none;
         transition        : 0.5s ease;
-        color: darken($primary, 20%);
+        color: darken($secondary, 10%);
     }
     &:focus{
         outline: none;
@@ -119,6 +122,22 @@ hr{
 //     min-height: 100vh;
     
 // }
+
+// theming
+
+[data-theme='light'] .d-block-light,
+[data-theme='dark'] .d-block-dark {
+    display: block !important;
+}
+#theme-toggle{
+    padding: 5px;
+    vertical-align: middle;
+    img {
+        max-width: 26px;
+    }
+} 
+
+
 
 .logo-outer{
     position: relative;
@@ -170,6 +189,7 @@ hr{
     background: url('../../img/BG.png');
     padding-top: 115px;
     height: 100vh;
+    min-height: 450px;
     background-size: cover;
     background-repeat: no-repeat;
     text-align: center;
@@ -209,6 +229,7 @@ hr{
         .outline-text{
             right: calc(100% - 50px);
             color: #f2f3fe;
+            text-shadow: -1px -1px 0 $color-white, 1px -1px 0 $color-white, -1px 1px 0 $color-white, 1px 1px 0 $color-white;  
             font-size: 148px;
             position: absolute;
             display: inline-block;
@@ -223,11 +244,15 @@ hr{
    
 }
 .outline-text{
-    text-shadow:
-    -1px -1px 0 $color-white,
-    1px -1px 0 $color-white,
-    -1px 1px 0 $color-white,
-    1px 1px 0 $color-white;  
+    font-size: 77px;
+    color: var(--c-outline-text);
+    font-family: $font-family-mulish;
+    text-shadow: -1px -1px 0 var(--c-outline-text-shadow), 1px -1px 0 var(--c-outline-text-shadow), -1px 1px 0 var(--c-outline-text-shadow), 1px 1px 0 rgba(92,56,165,0.2);
+    &.position-top-right{
+        position: absolute;
+        top: 0;
+        right: 40px;
+    }
 }
 .scroll-down-wrap{
     position: absolute;
@@ -251,9 +276,10 @@ hr{
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 30px;
+    right: 20px;
     top: 50%;
     transform: translateY(-50%);
+    z-index: 2;
     a{
         margin-bottom: 12px;
         display: inline-block;
@@ -285,6 +311,9 @@ hr{
             vertical-align: middle;
             font-weight: 600;
             color: $primary;
+            em{
+                
+            }
         }
     }
 }
@@ -309,6 +338,7 @@ hr{
 
 section{
 padding: 110px 0;
+position: relative;
 p{
     font-size: 18px;
     line-height: 28px;
@@ -322,9 +352,12 @@ p{
     position: relative;
     max-width: 471px;
     margin: 0;
+    background: url(../../img/about-bg.jpg) no-repeat 0 center;
+    background-size: cover;
     img{
         position: relative;
         z-index: 2;
+        filter: brightness(1.30);
     }
     &:after{
         position: absolute;
@@ -339,13 +372,30 @@ p{
     }
     .about-text{
         position: absolute;
-        text-shadow: -1px -1px 0 rgba(92,56,165,0.2), 1px -1px 0 rgba(92,56,165,0.2), -1px 1px 0 rgba(92,56,165,0.2), 1px 1px 0 rgba(92,56,165,0.2);
         transform: rotate(-90deg) translateX(-225px) translateY(-220px);
-        color: white;
         z-index: 9;
         top: 0;
-        font-size: 77px;
         left: 0;
+    }
+}
+.progress-wrap{
+    margin-bottom: 30px;
+    .progress{
+        height: 7px;
+        @include box-shadow(inset 0px 3px 6px 0px rgba(179,165,210,1));
+    }
+    .skill-outer{
+        font-family: $font-family-mulish;
+        font-size: 18px;
+        line-height: 1;
+        margin-bottom: 8px;
+        font-weight: 700;
+        span{
+            em{
+                opacity: 0.5;
+                font-style: normal;
+            }
+        }
     }
 }
 
@@ -357,7 +407,7 @@ p{
 //     'Segoe UI Symbol';
 //     font-size: 0.875rem;
 //     line-height: 1.375rem;
-//     cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
+    // cursor: url("data:image/svg+xml,%3Csvg height='6' width='6' viewBox='0 0 8 8' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='4' cy='4' fill='%23eee' r='4'/%3E%3C/svg%3E") 3 3, auto;
 //   }
   
 //   .stroke-only {
@@ -422,58 +472,61 @@ p{
 //     line-height: 2;
 //   }
   
-//   .cursor {
-//     display: none;
-//     position: fixed;
-//     top: 0;
-//     left: 0;
-//     width: var(--width);
-//     height: var(--height);
-//     transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
-//     /* transition-duration: 125ms;
-//     transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
-//     transition-property: width, height, transform; */
-//     transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
-//                 150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
-//                 150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
-//     z-index: 1;
-//     pointer-events: none;
-//     will-change: transform;
-//   }
-//   @media (pointer: fine) {
-//     .cursor {
-//       display: block;
-//     }
-//   }
-//   .cursor::after {
-//     content: '';
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     right: 0;
-//     bottom: 0;
-//     border-radius: var(--radius);
-//     border: 1px solid #b55400;
-//     opacity: var(--scale);
-//     -webkit-transform: scale(var(--scale));
-//             transform: scale(var(--scale));
-//     transition: 300ms opacity cubic-bezier(0.39, 0.575, 0.565, 1),
-//                 300ms transform cubic-bezier(0.39, 0.575, 0.565, 1),
-//                 150ms border-radius cubic-bezier(0.39, 0.575, 0.565, 1);
-//   }
+  .cursor {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: var(--width);
+    height: var(--height);
+    transform: translate(calc(var(--x) - var(--width) / 2), calc(var(--y) - var(--height) / 2));
+    /* transition-duration: 125ms;
+    transition-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+    transition-property: width, height, transform; */
+    opacity: var(--scale);
+    background: $primary;
+    border-radius: 100%;
+    transition: 150ms width cubic-bezier(0.39, 0.575, 0.565, 1),
+                150ms height cubic-bezier(0.39, 0.575, 0.565, 1),
+                150ms transform cubic-bezier(0.39, 0.575, 0.565, 1);
+    z-index: 1;
+    pointer-events: none;
+    will-change: transform;
+  }
+  @media (pointer: fine) {
+    .cursor {
+      display: block;
+    }
+  }
   
-//   html:not(html:hover) .cursor::after {
-//     opacity: 0;
-//     transform: scale(0);
-//   }
-  
-//   .link {
-//     display: flex;
-//     align-items: center;
-//     justify-content: center;
-//     width: 52px;
-//     height: 52px;
-//     background: none;
-//     border-radius: 50%;
-//   }
-  
+  .section-light{
+    background-color: var(--c-section-bg-light);
+    .outline-text{
+        color: var(--c-section-bg-light);
+    }
+  }
+  .strength-block{
+    text-align: center;
+    margin-bottom: 80px;
+    &:nth-last-child(-n+2){
+        margin-bottom: 0;
+    }
+    i{
+        margin-bottom: 15px;
+        display: inline-block;
+        padding: 10px;
+        height: 65px;
+        width: 65px;
+        line-height: 45px;
+    }
+    h3{
+        margin-bottom: 20px;
+    }
+    p{
+        margin: 0 auto;
+        max-width: 420px;
+    }
+  }
+  .bg-tertiary{
+    background-color: $tertiary;
+  }
