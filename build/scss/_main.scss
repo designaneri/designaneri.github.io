@@ -200,6 +200,9 @@ hr{
     padding-bottom: 115px;
     padding-left: 80px;
     padding-right: 80px;
+    [data-theme='dark'] &{
+        background-image: url('../../img/bg-dark.png');
+    }
     .banner-heading{
         position: relative;
         font-family: $font-family-merriweather;
@@ -208,7 +211,9 @@ hr{
         font-weight: 900;
         margin-bottom: 0;
         font-size: 52px;
-        
+        [data-theme='dark'] &{
+            fill: $gray-400;
+        }
     }
     .banner-heading-wrap{
         width: 714px;
@@ -221,15 +226,15 @@ hr{
             z-index: 2;
             font-size: 24px;
             font-family: $font-family-mulish;
-            color: $color-black;
+            fill: var(--c-text-main);
             margin-bottom: 10px;
             font-weight: 600;
             display: inline-block;
         }
         .outline-text{
             right: calc(100% - 50px);
-            color: #f2f3fe;
-            text-shadow: -1px -1px 0 $color-white, 1px -1px 0 $color-white, -1px 1px 0 $color-white, 1px 1px 0 $color-white;  
+            color: var(--c-gray-lighter);
+            text-shadow: -1px -1px 0 var(--c-outline-text), 1px -1px 0 var(--c-outline-text), -1px 1px 0 var(--c-outline-text), 1px 1px 0 var(--c-outline-text);  
             font-size: 148px;
             position: absolute;
             display: inline-block;
@@ -265,7 +270,7 @@ hr{
         text-align: center;
         span{
             display: block;
-            color: $gray-500;
+            color: var(  --c-text-light);
             font-weight: 600;
             font-size: 14px;
             margin-bottom: 15px;

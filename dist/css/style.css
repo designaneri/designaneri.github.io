@@ -10163,7 +10163,7 @@ header .header-inner .logo-img {
 }
 header.sticky {
   background-color: var(--c-body-bg);
-  border-bottom: 1px solid #ebebeb;
+  border-bottom: 1px solid var(--c-gray-lighter);
 }
 header.sticky .header-inner {
   padding: 12px 10px;
@@ -10598,6 +10598,9 @@ hr {
   padding-left: 80px;
   padding-right: 80px;
 }
+[data-theme=dark] .banner {
+  background-image: url("../../img/bg-dark.png");
+}
 .banner .banner-heading {
   position: relative;
   font-family: "Merriweather", serif;
@@ -10606,6 +10609,9 @@ hr {
   font-weight: 900;
   margin-bottom: 0;
   font-size: 52px;
+}
+[data-theme=dark] .banner .banner-heading {
+  fill: #e8e8e8;
 }
 .banner .banner-heading-wrap {
   width: 714px;
@@ -10619,15 +10625,15 @@ hr {
   z-index: 2;
   font-size: 24px;
   font-family: "Mulish", sans-serif;
-  color: #1A1729;
+  fill: var(--c-text-main);
   margin-bottom: 10px;
   font-weight: 600;
   display: inline-block;
 }
 .banner .overlap-text-outer .outline-text {
   right: calc(100% - 50px);
-  color: #f2f3fe;
-  text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
+  color: var(--c-gray-lighter);
+  text-shadow: -1px -1px 0 var(--c-outline-text), 1px -1px 0 var(--c-outline-text), -1px 1px 0 var(--c-outline-text), 1px 1px 0 var(--c-outline-text);
   font-size: 148px;
   position: absolute;
   display: inline-block;
@@ -10664,7 +10670,7 @@ hr {
 }
 .scroll-down-wrap .scroll-down span {
   display: block;
-  color: #4C4B54;
+  color: var(--c-text-light);
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 15px;
