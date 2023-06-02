@@ -1,7 +1,9 @@
 //Bootstrap ---------------------------------------------------
-@import "../../build/scss/bootstrap/scss/functions";
+@import "vendor/bootstrap/scss/functions";
 @import "_bootstrap-variable";
-@import "../../build/scss/bootstrap/scss/bootstrap";
+@import "vendor/bootstrap/scss/bootstrap";
+@import "vendor/owlCarousel/owl.theme.default.scss";
+@import "vendor/owlCarousel/owl.carousel";
 
 @import "variable";
 @import "mixins";

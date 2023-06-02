@@ -10,6 +10,11 @@ button:focus {
 .btn:focus {
     box-shadow: none;
 }
+.btn-transparent{
+    background: transparent;
+    border: 0; 
+    outline: 0;
+}
 .btn{
     border-radius: 0px;  
     padding: 7px 20px 8px 20px;  

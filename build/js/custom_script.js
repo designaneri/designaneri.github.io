@@ -45,7 +45,7 @@ document.querySelectorAll('.cursor').forEach(cursor => {
         updateProperties(cursor, state)
     })
 
-    document.querySelectorAll('a, button').forEach(elem => {
+    document.querySelectorAll('a, button, .project-block .card').forEach(elem => {
         elem.addEventListener('mouseenter', () => (onElement = elem))
         elem.addEventListener('mouseleave', () => (onElement = undefined))
     })
@@ -97,4 +97,48 @@ $(window).on("load", function () {
             scrollTop: $("#about").offset().top},
             'slow');
     });
+    $('.tabs-nav a').click(function(e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        var customType = $( this ).data('filter');
+        $( this ).closest("li").siblings("li").removeClass("active");
+        $( this ).closest("li").addClass("active");
+        
+        if(customType !== "all"){
+            $(".project-block").hide().filter(function () {
+                return $(this).data('block') === customType;    
+            }).show();
+        }else{
+            $(".project-block").show();
+        }
+    })
+    $(".project-block .card").click(function(e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        $(this).parent().find(".project-block-information").show();
+    })
+    $(".project-block-information .overlay").click(function(e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        $(this).parent().hide();
+    })
+    
+    $('.owl-carousel').owlCarousel({
+        loop:true,
+        singleItem: true,
+        items:1,
+    })
+    // $('.tabs-nav a').click(function() {
+
+    //     // Check for active
+    //     $('.tabs-nav li').removeClass('active');
+    //     $(this).parent().addClass('active');
+    
+    //     // Display active tab
+    //     let currentTab = $(this).attr('href');
+    //     $('.tabs-content div').hide();
+    //     $(currentTab).show();
+    
+    //     return false;
+    //   });
 });
