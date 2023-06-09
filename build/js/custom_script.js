@@ -97,6 +97,17 @@ $(window).on("load", function () {
             scrollTop: $("#about").offset().top},
             'slow');
     });
+    $(".navigation-links a").click(function(e){
+        var $this = $(this).attr("href");
+        console.log($this)
+        e.preventDefault();
+        e.stopImmediatePropagation();
+        $(".hamburger-box").removeClass("is-active");
+        $("html,body").removeClass("menu-open");
+        $('html,body').animate({
+            scrollTop: $($this).offset().top},
+            'slower');
+    });
     $('.tabs-nav a').click(function(e) {
         e.stopImmediatePropagation();
         e.preventDefault();
@@ -116,18 +127,40 @@ $(window).on("load", function () {
         e.stopImmediatePropagation();
         e.preventDefault();
         $(this).parent().find(".project-block-information").show();
+        $("html,body").addClass("open-project");
     })
     $(".project-block-information .overlay").click(function(e) {
         e.stopImmediatePropagation();
         e.preventDefault();
         $(this).parent().hide();
+        $("html,body").removeClass("open-project");
+    })
+    $(".back-projects").click(function(e) {
+        e.stopImmediatePropagation();
+        e.preventDefault();
+        $(".project-block-information").hide();
+        $("html,body").removeClass("open-project");
     })
     
     $('.owl-carousel').owlCarousel({
         loop:true,
         singleItem: true,
         items:1,
+        nav: true,
+        dots: false,
+        navText: ["<i class='fa-solid fa-chevron-left'></i>","<i class='fa-solid fa-chevron-right'></i>"]
     })
+    $('.popup-gallery').each(function() { 
+    $(this).magnificPopup({
+		delegate: '.owl-item:not(.cloned) a',
+		type: 'image',
+		// removalDelay: 500, //delay removal by X to allow out-animation
+        gallery:{
+        enabled:true,
+        navigateByImgClick: true,
+        }
+	});
+});
     // $('.tabs-nav a').click(function() {
 
     //     // Check for active

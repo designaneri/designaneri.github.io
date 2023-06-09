@@ -80,6 +80,12 @@ header{
             @include transition(all 0.3s);
             max-width: 104px;
         }
+        #theme-toggle{
+            i{
+                margin-right: 0;
+                color: var(--c-text-main);
+            }
+        }
     }
     &.sticky{
         background-color: var(--c-body-bg);

@@ -1,9 +1,17 @@
-//Bootstrap ---------------------------------------------------
+//Bootstrap, owl and magnific popup ---------------------------------------------------
 @import "vendor/bootstrap/scss/functions";
 @import "_bootstrap-variable";
 @import "vendor/bootstrap/scss/bootstrap";
-@import "vendor/owlCarousel/owl.theme.default.scss";
+@import "vendor/owlCarousel/owl.theme.default";
 @import "vendor/owlCarousel/owl.carousel";
+@import "vendor/magnificPopup/magnific-popup";
+// fontawesome
+// ---------------------------------------------------
+@import "vendor/fontawesome-pro/fontawesome.scss";
+@import "vendor/fontawesome-pro/solid.scss";
+@import "vendor/fontawesome-pro/light.scss";
+@import "vendor/fontawesome-pro/regular.scss";
+@import "vendor/fontawesome-pro/brands.scss";
 
 @import "variable";
 @import "mixins";
