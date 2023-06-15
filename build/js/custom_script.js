@@ -6,7 +6,6 @@ const updateProperties = (elem, state) => {
     elem.style.setProperty('--radius', state.radius)
     elem.style.setProperty('--scale', state.scale)
 }
-
 document.querySelectorAll('.cursor').forEach(cursor => {
     let onElement
 
@@ -161,6 +160,7 @@ $(window).on("load", function () {
         }
 	});
 });
+
     // $('.tabs-nav a').click(function() {
 
     //     // Check for active

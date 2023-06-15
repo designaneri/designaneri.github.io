@@ -27,7 +27,7 @@ $primary: #5C38A5;
 $primary-light: lighten($primary, 33%);
 $secondary: #1AD1A1;
 $tertiary:#EE4D8D;
-
+$input-text-disabled: #999;
 
 @mixin common-vars {
   --c-white: #ffffff;
@@ -44,6 +44,7 @@ $tertiary:#EE4D8D;
   --c-outline-text-shadow: rgba(92,56,165,0.2);
   --c-text-light: #575861;
   --c-gray-light: #EFEFEF;
+  --c-form-control: #FFFFFF;
   --c-gray-lighter: #f9f9f9;
   --c-border: #DADCE5;
   --c-border-light: var(--c-gray-light);
@@ -61,6 +62,7 @@ $tertiary:#EE4D8D;
   --c-outline-text-shadow: rgba(255,255,255,0.2);
   --c-text-light: #b2b2b3;
   --c-gray-light: #454854;
+  --c-form-control: #454854;
   --c-gray-lighter: #303340;
   --c-border: #35394b;
   --c-border-light: var(--c-gray-light);

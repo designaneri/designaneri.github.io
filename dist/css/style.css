@@ -15,6 +15,7 @@
   --c-outline-text-shadow: rgba(92,56,165,0.2);
   --c-text-light: #575861;
   --c-gray-light: #EFEFEF;
+  --c-form-control: #FFFFFF;
   --c-gray-lighter: #f9f9f9;
   --c-border: #DADCE5;
   --c-border-light: var(--c-gray-light);
@@ -32,6 +33,7 @@
   --c-outline-text-shadow: rgba(255,255,255,0.2);
   --c-text-light: #b2b2b3;
   --c-gray-light: #454854;
+  --c-form-control: #454854;
   --c-gray-lighter: #303340;
   --c-border: #35394b;
   --c-border-light: var(--c-gray-light);
@@ -30264,6 +30266,47 @@ button:focus {
     background: $color-white;
     border: 0;
 }*/
+.form-group {
+  margin-bottom: 30px;
+  position: relative;
+}
+.form-group:focus {
+  outline: 0;
+}
+.form-group label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.form-group .form-control[disabled],
+.form-group fieldset[disabled] .form-control {
+  background-color: var(--c-border);
+  color: #999;
+  opacity: 1;
+}
+.form-group .form-control[readonly] {
+  background-color: var(--c-gray-lighter);
+  border: 1px solid var(--c-border);
+}
+.form-group .form-control[readonly]:focus {
+  background-color: var(--c-gray-lighter);
+  border: 1px solid var(--c-border);
+}
+.form-group .form-control {
+  font-size: 13px;
+  color: var(--c-text-main);
+  height: auto;
+  padding: 10px 16px;
+  background-color: var(--c-form-control);
+}
+.form-group .form-control:focus {
+  box-shadow: none;
+  border: 1px solid #5C38A5;
+}
+.form-group textarea.form-control {
+  min-height: 150px;
+  resize: none;
+}
+
 /*-----------------------------------------------------------------------------------
 
       Template Name:HRPS
@@ -30621,7 +30664,7 @@ section a {
 .about-figure {
   position: relative;
   max-width: 471px;
-  margin: 0;
+  margin: 0 0 30px;
   background: url(../../img/about-bg.jpg) no-repeat 0 center;
   background-size: cover;
 }
