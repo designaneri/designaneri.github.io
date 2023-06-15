@@ -30884,6 +30884,9 @@ section a {
   letter-spacing: 0;
   font-family: "Mulish";
 }
+.project-block-information aside .aside-inner .popup-gallery {
+  margin-bottom: 20px;
+}
 .project-block-information aside .aside-inner .popup-gallery a {
   display: block;
 }
