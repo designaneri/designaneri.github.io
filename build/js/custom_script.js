@@ -96,6 +96,12 @@ $(window).on("load", function () {
             scrollTop: ($("#about").offset().top - 63)},
             'slow');
     });
+    $(".scroll-contact").click(function() {
+        $('html,body').animate({
+            scrollTop: ($("#contact").offset().top - 63)},
+            1200);
+    });
+    scroll-contact
     $(".navigation-links a").click(function(e){
         var $this = $(this).attr("href");
         console.log($this)
