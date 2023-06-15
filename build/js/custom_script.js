@@ -93,7 +93,7 @@ $(window).on("load", function () {
       });
       $(".scroll-down").click(function() {
         $('html,body').animate({
-            scrollTop: $("#about").offset().top},
+            scrollTop: ($("#about").offset().top - 63)},
             'slow');
     });
     $(".navigation-links a").click(function(e){

@@ -50,6 +50,8 @@ $input-text-disabled: #999;
   --c-border-light: var(--c-gray-light);
   --shadow-opacity: 0.2;
   --c-shadow: 0 10px 10px rgba(0, 0, 0, var(--shadow-opacity));
+  --c-primary: #5C38A5;
+  --light-bg-hover: #eaedff;
 }
 /*=====================================================
   dark theme colors ( as SCSS mixin )
@@ -68,6 +70,8 @@ $input-text-disabled: #999;
   --c-border-light: var(--c-gray-light);
   --shadow-opacity: 0.2;
   --c-shadow: 0 10px 10px rgba(0, 0, 0, var(--shadow-opacity));
+  --c-primary: #af90ef;
+  --light-bg-hover: #262b52;
 }
 :root {
   @include common-vars;
