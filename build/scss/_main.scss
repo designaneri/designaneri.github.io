@@ -637,9 +637,14 @@ p{
         margin-right: 5px;
         a {
             display: block;
-            padding: 10px 15px;
+            padding: 10px;
             color: var(--c-text-light);
             font-weight: 700;
+            font-size: 14px;
+            @include media-breakpoint-up(sm){
+                padding: 10px 15px;
+                font-size: 16px;
+            }
           }
           &.active {
             border-color: var(--c-text-main);
