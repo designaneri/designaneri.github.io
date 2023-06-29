@@ -47,6 +47,7 @@ function jsTask() {
             'build/js/bootstrap.min.js',            
             'build/js/owl.carousel.min.js',
             'build/js/jquery.magnific-popup.min.js',
+            'build/js/aos.js',
             'build/js/custom_script.js',
 
         ])
