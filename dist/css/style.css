@@ -28968,7 +28968,7 @@ button:focus {
   cursor: pointer;
   position: relative;
   display: inline-block;
-  border-radius: 4px;
+  border-radius: 100px;
 }
 .btn i {
   margin: 0 10px 0px 0;
@@ -29289,7 +29289,7 @@ hr {
 }
 @media (min-width: 992px) {
   .banner .banner-heading-wrap {
-    width: 714px;
+    width: 564px;
   }
 }
 .banner .overlap-text-outer {
